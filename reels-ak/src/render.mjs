@@ -4,13 +4,14 @@ import { spawn } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 const [, , htmlPath, outPath, ffmpeg, onlyFrames] = process.argv;
-const FPS = 30, DUR = 25;
+const FPS = 30;
 const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', args: ['--autoplay-policy=no-user-gesture-required'] });
 const page = await browser.newPage({ viewport: { width: 1400, height: 1000 } });
 page.on('console', m => console.log('page:', m.text()));
 page.on('pageerror', e => console.log('ERR', e.message));
 await page.goto('file://' + path.resolve(htmlPath));
 await page.waitForFunction(() => window.__ready === true, null, { timeout: 60000 });
+const DUR = await page.evaluate(() => DUR);
 if (onlyFrames) { // imagens de conferência
   for (const t of onlyFrames.split(',').map(Number)) {
     const b64 = await page.evaluate(t => { render(t); return document.getElementById('c').toDataURL('image/jpeg', .85).split(',')[1]; }, t);
