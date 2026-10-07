@@ -17,3 +17,6 @@
 - `AK-post-10-10.mp4`: vídeo 1080×1350 para o feed, com trilha.
 - `ak-post-10-10.html`: a mesma animação, com o botão **Baixar MP4**.
 - Fonte: `src/ak-post-10-10.template.html` → `python3 src/build.py ak-post-10-10`.
+- `AK-post-10-10-reels-completo.mp4`: versão vertical (9:16) do post + encerramento "Comenta RAIO-X" (≈41s).
+- `AK-encerramento-raiox.mp4` / `ak-encerramento-raiox.html`: encerramento de 7s "Comenta RAIO-X".
+- O post tem pausas de leitura (`HOLDS` em `src/ak-post-10-10.template.html`); o fundo e a música seguem no tempo real.
