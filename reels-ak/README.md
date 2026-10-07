@@ -11,3 +11,9 @@
 - `AK-encerramento-cliente.mp4`: final de 5s com logo animada e CTA, para colar no fim de qualquer Reels.
 - `ak-encerramento.html`: a mesma animação, com o botão **Baixar MP4**.
 - Fonte: `src/ak-encerramento.template.html` → `python3 src/build.py ak-encerramento`.
+
+## Post 10/10 "Falta de sorte é falta de rotina" (22s, 4:5)
+
+- `AK-post-10-10.mp4`: vídeo 1080×1350 para o feed, com trilha.
+- `ak-post-10-10.html`: a mesma animação, com o botão **Baixar MP4**.
+- Fonte: `src/ak-post-10-10.template.html` → `python3 src/build.py ak-post-10-10`.
